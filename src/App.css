@@ -36,3 +36,22 @@
     transform: rotate(360deg);
   }
 }
+
+.search-bar {
+  width: 900px;
+  height: 30px;
+}
+
+.btn-show {
+  width: 20px;
+  height: 20px;
+  display: center;
+}
+
+.div-show {
+  display: inline;
+}
+
+.table {
+ display: center;
+}

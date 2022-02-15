@@ -1,13 +1,23 @@
 import { useState } from "react";
 
-function SearchBar() {
-    const [show, setShows] = useState(0);
+function SearchBar({onFilter}) {
+    // const [input, setInput] = useState({ name: ''});
+
+    const handleInput = element => {
+        // setInput(prev => {
+        //     return {...prev, [element.target.name]: element.target.value, }
+        // })
+        onFilter(element.target.value)
+    }
 
     return (
         <div>
             <h4>Search</h4>
             <div>
-                <button type="submit"></button><h4>Only show products in stock</h4>
+                <input type="search"  onChange={handleInput} className="search-bar" placeholder="Search..."/>
+            </div>
+            <div className="div-show">
+                <button type="submit" className="btn-show"></button><> Only show products in stock </>
             </div>
         </div>
     )

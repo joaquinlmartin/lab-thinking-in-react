@@ -1,12 +1,27 @@
-import { useState } from "react";
 import ProductRow from "./ProductRow";
 
-function ProductTable() {
-    const [products, setProducts] = useState(0);
+function ProductTable({ products }) {
     return (
-        <div>
-            <ProductRow/>
-        </div>
+        <table>
+            <thead>
+                <th>Name</th>
+                <th>Price</th>
+            </thead>
+            <tbody>
+                <td>
+                {products.map((product, i) => (
+                <ProductRow
+                    key={i}
+                    id={product.id}
+                    category={product.category}
+                    inStock={product.inStock}
+                    name={product.name}
+                    price={product.price}
+                />
+            ))}
+                </td>
+            </tbody>
+        </table>
     )
 }
 
