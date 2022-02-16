@@ -1,13 +1,9 @@
 import { useState } from "react";
 
 function SearchBar({onFilter}) {
-    // const [input, setInput] = useState({ name: ''});
-
+    
     const handleInput = element => {
-        // setInput(prev => {
-        //     return {...prev, [element.target.name]: element.target.value, }
-        // })
-        onFilter(element.target.value)
+        onFilter(e.target.value)
     }
 
     return (
